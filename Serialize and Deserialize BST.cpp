@@ -15,7 +15,6 @@ struct TreeNode {
 
 class Codec {
 public:
-
     // Encodes a tree to a single string.
     static string serialize(TreeNode* root) {
         string s;
