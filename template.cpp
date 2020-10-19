@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-  auto data = {};
+  vector<tuple<>> data = {};
   for(auto &data: data) {
     auto sol = Solution();
     auto ans = sol. ;
