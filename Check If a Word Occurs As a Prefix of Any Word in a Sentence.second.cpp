@@ -39,7 +39,7 @@ public:
       }
       if(cur == searchWord.length()) {
         if(i-cur < 0 || sentence[i-cur] == ' ') return cnt+1;
-        else cur = 0
+        else cur = 0;
       }
     }
     return -1;
@@ -48,9 +48,10 @@ public:
 
 int main() {
   vector<pair<string,string>> data = {
-    {"i love eating burger", "burg"},
-    {"this problem is an easy problem", "pro"},
-    {"i am tired",  "you"}
+    // {"i love eating burger", "burg"},
+    // {"this problem is an easy problem", "pro"},
+    // {"i am tired",  "you"},
+    {"", "aaaaa"}
   };
   for(auto &data: data) {
     auto sol = Solution();
