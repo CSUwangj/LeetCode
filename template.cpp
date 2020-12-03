@@ -8,7 +8,7 @@
 using namespace std;
 
 template<typename T>
-ostream& operator <<(ostream &out, const vector<T> &v) {
+ostream& operator<<(ostream &out, const vector<T> &v) {
   if(v.size() == 0) {
     out << "[]" << endl;
     return out;
@@ -18,6 +18,15 @@ ostream& operator <<(ostream &out, const vector<T> &v) {
     out << ", " << v[i];
   }
   out << ']' << endl;
+}
+
+ostream& operator<<(ostream &out, const bool &b) {
+  if(b) {
+    out << "true";
+  } else {
+    out << "false";
+  }
+  return out;
 }
 
 int main() {
