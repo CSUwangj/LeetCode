@@ -7,11 +7,24 @@
 #define lowbit(x) ((x)&(-x))
 using namespace std;
 
+template<typename T>
+ostream& operator <<(ostream &out, const vector<T> &v) {
+  if(v.size() == 0) {
+    out << "[]" << endl;
+    return out;
+  }
+  out << '[' << v[0];
+  for(int i = 1; i < v.size(); ++i) {
+    out << ", " << v[i];
+  }
+  out << ']' << endl;
+}
+
 int main() {
   vector<tuple<>> data = {};
   for(auto &data: data) {
     auto sol = Solution();
-    auto ans = sol. ;
+    auto ans = sol.;
     cout << ans << endl;
   } 
   return 0;
