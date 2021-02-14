@@ -14,6 +14,7 @@ std::ostream& operator<<(std::ostream &out, const std::vector<T> &v) {
     out << ", " << v[i];
   }
   out << ']' << std::endl;
+  return out;
 }
 
 std::ostream& operator<<(std::ostream &out, const bool &b) {
