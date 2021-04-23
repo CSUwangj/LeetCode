@@ -2,7 +2,12 @@
 #define LEETCODE_HELPER
 #include<iostream>
 #include<vector>
-
+auto speedup = []() {
+  std::ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  return nullptr;
+}();
 template<typename T>
 std::ostream& operator<<(std::ostream &out, const std::vector<T> &v) {
   if(v.size() == 0) {
