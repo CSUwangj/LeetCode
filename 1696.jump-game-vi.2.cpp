@@ -8,7 +8,7 @@
 class Solution {
 public:
   int maxResult(vector<int>& nums, int k) {
-    list<int> monoQueue{nums[0]};
+    deque<int> monoQueue{nums[0]};
     int len = nums.size();
     for(int i = 1; i < min(k, len); ++i) {
       nums[i] += monoQueue.front();
@@ -26,8 +26,8 @@ public:
 };
 
 // Accepted
-// 65/65 cases passed (256 ms)
-// Your runtime beats 23.86 % of cpp submissions
-// Your memory usage beats 18.31 % of cpp submissions (119.8 MB)
+// 65/65 cases passed (152 ms)
+// Your runtime beats 76.39 % of cpp submissions
+// Your memory usage beats 79.76 % of cpp submissions (78.3 MB)
 // @lc code=end
 
