@@ -1,5 +1,6 @@
 *
 !*.cpp
+!*.sql
 !*.js
 !.gitignore
 !helper.hpp
