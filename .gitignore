@@ -4,4 +4,4 @@
 !*.js
 !.gitignore
 !helper.hpp
-!*-in.txt
+!/input
