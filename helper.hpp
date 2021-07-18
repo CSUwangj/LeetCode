@@ -18,7 +18,7 @@ std::ostream& operator<<(std::ostream &out, const std::vector<T> &v) {
   for(int i = 1; i < v.size(); ++i) {
     out << ", " << v[i];
   }
-  out << ']' << std::endl;
+  out << ']';
   return out;
 }
 

@@ -1,27 +1,43 @@
-#include<bits/stdc++.h>
+/*
+ * @lc app=leetcode id=1203 lang=cpp
+ *
+ * [1203] Sort Items by Groups Respecting Dependencies
+ */
 
-using namespace std;
-
+// @lc code=start
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 class Solution {
-  int groupDegree[10] = {};
-  int degree[10] = {};
-  vector<int> children[10];
-  vector<int> groupChildren[10];
-  vector<int> items[10];
+  vector<int> groupDegree;
+  int degree[30000];
+  vector<vector<int>> children;
+  vector<vector<int>> groupChildren;
+  vector<vector<int>> items;
 public:
-  vector<int> sortItems(int n, int m, vector<int> group, vector<vector<int>> beforeItems) {
+  vector<int> sortItems(int n, int m, vector<int>& group, vector<vector<int>>& beforeItems) {
     // init
+    children.resize(n);
+    items.resize(m);
     for(int i = 0; i < n; ++i) {
-      if(group[i] == -1) group[i] = m++;
+      if(group[i] == -1) {
+        group[i] = m++;
+        items.push_back({});
+      }
       items[group[i]].push_back(i);
     }
+    groupChildren.resize(m);
+    groupDegree.resize(m);
     for(int i = 0; i < n; ++i) {
       for(auto p : beforeItems[i]) {
         children[p].push_back(i);
         degree[i] += 1;
         if(group[p] != group[i]) {
           groupDegree[group[i]] += 1;
-          groupChildren[p].push_back(group[i]);
+          groupChildren[group[p]].push_back(group[i]);
         }
       }
     }
@@ -41,7 +57,7 @@ public:
         if(!groupDegree[c]) q.push(c);
       }
     }
-    cout << groupOrder << endl;
+    // cout << groupOrder << endl;
     if(groupOrder.size() != m) return {};
 
     // sort items
@@ -69,8 +85,9 @@ public:
   }
 };
 
-int main() {
-    Solution a;
-    cout << a.sortItems(8, 2, {-1,-1,1,0,0,1,0,-1}, {{}, {6}, {5}, {6}, {3, 6}, {}, {}, {}}) << endl;
-    return 0;
-}
+// Accepted
+// 17/17 cases passed (60 ms)
+// Your runtime beats 97.68 % of cpp submissions
+// Your memory usage beats 70.86 % of cpp submissions (45.2 MB)
+// @lc code=end
+
