@@ -5,6 +5,12 @@
  */
 
 // @lc code=start
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 struct Node {
   int l, r, y, v;
   bool operator<(const Node& a) const {
@@ -86,5 +92,10 @@ public:
     return solve();
   }
 };
+
+// Accepted
+// 78/78 cases passed (24 ms)
+// Your runtime beats 23.46 % of cpp submissions
+// Your memory usage beats 100 % of cpp submissions (8.3 MB)
 // @lc code=end
 
