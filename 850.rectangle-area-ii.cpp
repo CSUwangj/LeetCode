@@ -37,7 +37,6 @@ void update(int l, int r, int ql, int qr, int v, int o = 0) {
   if(ql <= l && r <= qr) {
     lazy[o] += v;
   } else {
-    cout << l << ' '  << r << ' ' << ql << ' ' << qr << endl;
     int mid = (l + r) >> 1;
     if(ql <= mid) update(l, mid, ql, qr, v, o * 2 + 1);
     if(qr > mid) update(mid + 1, r, ql, qr, v, o * 2 + 2);
@@ -94,8 +93,8 @@ public:
 };
 
 // Accepted
-// 78/78 cases passed (24 ms)
-// Your runtime beats 23.46 % of cpp submissions
-// Your memory usage beats 100 % of cpp submissions (8.3 MB)
+// 78/78 cases passed (4 ms)
+// Your runtime beats 99.6 % of cpp submissions
+// Your memory usage beats 99.6 % of cpp submissions (8.3 MB)
 // @lc code=end
 
