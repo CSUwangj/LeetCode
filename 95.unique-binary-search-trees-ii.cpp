@@ -16,6 +16,12 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 TreeNode *copy(TreeNode *root) {
   if(!root) return nullptr;
   return new TreeNode(root->val, copy(root->left), copy(root->right));
@@ -41,5 +47,10 @@ public:
     return solve((1 << n) - 1);
   }
 };
+
+// Accepted
+// 8/8 cases passed (20 ms)
+// Your runtime beats 39.86 % of cpp submissions
+// Your memory usage beats 5.85 % of cpp submissions (19.7 MB)
 // @lc code=end
 
