@@ -1,18 +1,17 @@
 /*
- * @lc app=leetcode id=212 lang=cpp
+ * @lc app=leetcode id=79 lang=cpp
  *
- * [212] Word Search II
+ * [79] Word Search
  */
 
 // @lc code=start
 struct TrieNode {
   bool end = false;
-  TrieNode *child[26] = {};
+  TrieNode *child[128] = {};
 };
-void insert(TrieNode *root, string &word) {
+void insert(TrieNode *root, string word) {
   TrieNode *cur = root;
   for(auto c : word) {
-    c = c - 'a';
     if(!cur->child[c]) {
       cur->child[c] = new TrieNode();
     }
@@ -28,7 +27,7 @@ class Solution {
   int rows;
   int cols;
   void solve(vector<vector<char>>& board, TrieNode *root, int row, int col) {
-    root = root->child[board[row][col] - 'a'];
+    root = root->child[board[row][col]];
     vis[row][col] = true;
     current.push_back(board[row][col]);
     if(root) {
@@ -45,28 +44,24 @@ class Solution {
     current.pop_back();
   }
 public:
-  vector<string> findWords(vector<vector<char>>& board, vector<string>& w) {
+  bool exist(vector<vector<char>>& board, string word) {
     TrieNode *root = new TrieNode();
     rows = board.size();
     cols = board.front().size();
     vis.resize(rows, vector<bool>(cols));
-    for(auto &word : w) {
-      insert(root, word);
-    }
+    insert(root, word);
     for(int i = 0; i < rows; ++i) {
       for(int j = 0; j < cols; ++j) {
         solve(board, root, i, j);
       }
     }
-    sort(words.begin(), words.end());
-    words.resize(unique(words.begin(), words.end()) - words.begin());
-    return words;
+    return words.size();
   }
 };
 
 // Accepted
-// 51/51 cases passed (1948 ms)
-// Your runtime beats 5.01 % of cpp submissions
-// Your memory usage beats 5.12 % of cpp submissions (290.5 MB)
+// 57/57 cases passed (312 ms)
+// Your runtime beats 62.95 % of cpp submissions
+// Your memory usage beats 5.08 % of cpp submissions (8.2 MB)
 // @lc code=end
 
