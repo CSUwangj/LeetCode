@@ -5,3 +5,4 @@
 !.gitignore
 !helper.hpp
 !/input
+!/data_generator

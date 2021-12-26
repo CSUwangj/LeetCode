@@ -5,6 +5,12 @@
  */
 
 // @lc code=start
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 class Solution {
 public:
   int nthUglyNumber(int n) {
@@ -25,5 +31,10 @@ public:
     return dp[n - 1];
   }
 };
+
+// Accepted
+// 596/596 cases passed (4 ms)
+// Your runtime beats 93.41 % of cpp submissions
+// Your memory usage beats 88.63 % of cpp submissions (5.9 MB)
 // @lc code=end
 
