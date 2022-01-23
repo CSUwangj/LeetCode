@@ -5,6 +5,12 @@
  */
 
 // @lc code=start
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 int dp[2][5];
 const int MOD = 1e9 + 7;
 class Solution {
@@ -36,5 +42,10 @@ public:
     return answer;
   }
 };
+
+// Accepted
+// 43/43 cases passed (4 ms)
+// Your runtime beats 86.19 % of cpp submissions
+// Your memory usage beats 99.49 % of cpp submissions (5.8 MB)
 // @lc code=end
 

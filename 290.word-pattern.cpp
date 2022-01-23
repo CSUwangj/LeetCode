@@ -5,6 +5,12 @@
  */
 
 // @lc code=start
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 class Solution {
   int countWords(string &s) {
     bool isSpace = true;
@@ -40,5 +46,10 @@ public:
     return true;
   }
 };
+
+// Accepted
+// 36/36 cases passed (0 ms)
+// Your runtime beats 100 % of cpp submissions
+// Your memory usage beats 82.42 % of cpp submissions (6.3 MB)
 // @lc code=end
 
