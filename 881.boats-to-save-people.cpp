@@ -5,6 +5,12 @@
  */
 
 // @lc code=start
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 class Solution {
 public:
   int numRescueBoats(vector<int>& people, int limit) {
@@ -28,5 +34,11 @@ public:
     return answer;
   }
 };
+
+
+// Accepted
+// 78/78 cases passed (68 ms)
+// Your runtime beats 97.18 % of cpp submissions
+// Your memory usage beats 57.42 % of cpp submissions (42 MB)
 // @lc code=end
 
