@@ -5,17 +5,12 @@
  */
 
 // @lc code=start
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 class Solution {
 public:
   TreeNode* searchBST(TreeNode* root, int val) {
@@ -25,5 +20,10 @@ public:
     return searchBST(root->left, val);
   }
 };
+
+// Accepted
+// 36/36 cases passed (36 ms)
+// Your runtime beats 95.42 % of cpp submissions
+// Your memory usage beats 93.48 % of cpp submissions (34.7 MB)
 // @lc code=end
 

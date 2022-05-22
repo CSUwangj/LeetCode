@@ -6,4 +6,5 @@
 !helper.hpp
 !/input
 !/data_generator
+!/template
 tmp.cpp
