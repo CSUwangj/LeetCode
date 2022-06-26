@@ -5,7 +5,6 @@
  */
 
 // @lc code=start
-
 class Solution {
 public:
 	int maxScore(vector<int>& cardPoints, int k) {
@@ -23,5 +22,10 @@ public:
 		return answer;
 	}
 };
+
+// Accepted
+// 40/40 cases passed (110 ms)
+// Your runtime beats 24.54 % of cpp submissions
+// Your memory usage beats 8.03 % of cpp submissions (45.8 MB)
 // @lc code=end
 

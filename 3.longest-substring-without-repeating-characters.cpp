@@ -7,25 +7,25 @@
 // @lc code=start
 class Solution {
 public:
-    int lengthOfLongestSubstring(string s) {
-        bool has[128] = {false};
-        int head = 0, tail = 0;
-        int answer = 0;
-        int len = s.length();
-        while(head < len) {
-            if(!has[s[head]]) {
-                has[s[head]] = true;
-                ++head;
-                answer = max(head-tail, answer);
-            } else {
-                while(has[s[head]]) {
-                    has[s[tail]] = false;
-                    ++tail;
-                }
-            }
+  int lengthOfLongestSubstring(string s) {
+    bool has[128] = {false};
+    int head = 0, tail = 0;
+    int answer = 0;
+    int len = s.length();
+    while(head < len) {
+      if(!has[s[head]]) {
+        has[s[head]] = true;
+        ++head;
+        answer = max(head-tail, answer);
+      } else {
+        while(has[s[head]]) {
+          has[s[tail]] = false;
+          ++tail;
         }
-        return answer;
+      }
     }
+    return answer;
+  }
 };
 
 // Accepted

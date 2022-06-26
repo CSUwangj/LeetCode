@@ -27,5 +27,10 @@ public:
     return s1.length() + s2.length() - LCS(s1, s2) * 2;
   }
 };
+
+// Accepted
+// 1306/1306 cases passed (17 ms)
+// Your runtime beats 77.81 % of cpp submissions
+// Your memory usage beats 99.74 % of cpp submissions (6.4 MB)
 // @lc code=end
 

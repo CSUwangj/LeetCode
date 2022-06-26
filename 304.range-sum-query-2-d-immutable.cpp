@@ -23,10 +23,10 @@ public:
     return sum[row2 + 1][col2 + 1] - sum[row1][col2 + 1] - sum[row2 + 1][col1] + sum[row1][col1];
   }
 };
-/**
- * Your NumMatrix object will be instantiated and called as such:
- * NumMatrix* obj = new NumMatrix(matrix);
- * int param_1 = obj->sumRegion(row1,col1,row2,col2);
- */
+
+// Accepted
+// 24/24 cases passed (898 ms)
+// Your runtime beats 10.43 % of cpp submissions
+// Your memory usage beats 79.01 % of cpp submissions (147.9 MB)
 // @lc code=end
 

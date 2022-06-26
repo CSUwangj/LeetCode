@@ -34,6 +34,10 @@ public:
 
 // cur - x * diff < nxt
 // (cur - nxt) / diff
+// Accepted
+// 71/71 cases passed (64 ms)
+// Your runtime beats 52.45 % of cpp submissions
+// Your memory usage beats 51.05 % of cpp submissions (30.1 MB)
 // @lc code=end
 
 

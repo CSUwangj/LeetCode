@@ -27,5 +27,10 @@ public:
     return addCount < 2 || minusCount < 2;
   }
 };
+
+// Accepted
+// 335/335 cases passed (42 ms)
+// Your runtime beats 46.84 % of cpp submissions
+// Your memory usage beats 7.46 % of cpp submissions (27.9 MB)
 // @lc code=end
 

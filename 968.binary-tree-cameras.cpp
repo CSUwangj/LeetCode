@@ -45,5 +45,10 @@ public:
     return min(put[root], covered[root]);
   }
 };
+
+// Accepted
+// 171/171 cases passed (36 ms)
+// Your runtime beats 9.71 % of cpp submissions
+// Your memory usage beats 5.1 % of cpp submissions (28.2 MB)
 // @lc code=end
 

@@ -13,5 +13,10 @@ public:
     return nums;
   }
 };
+
+// Accepted
+// 53/53 cases passed (0 ms)
+// Your runtime beats 100 % of cpp submissions
+// Your memory usage beats 38.06 % of cpp submissions (8.6 MB)
 // @lc code=end
 
