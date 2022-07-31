@@ -76,11 +76,9 @@ public:
   }
 };
 
-/**
- * Your NumArray object will be instantiated and called as such:
- * NumArray* obj = new NumArray(nums);
- * obj->update(index,val);
- * int param_2 = obj->sumRange(left,right);
- */
+// Accepted
+// 15/15 cases passed (600 ms)
+// Your runtime beats 69.07 % of cpp submissions
+// Your memory usage beats 11 % of cpp submissions (165.2 MB)
 // @lc code=end
 

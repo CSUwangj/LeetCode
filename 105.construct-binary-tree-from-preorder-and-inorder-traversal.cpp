@@ -45,5 +45,10 @@ public:
     return build(preorder, 0, len - 1, inorder, 0, len - 1);
   }
 };
+
+// Accepted
+// 203/203 cases passed (44 ms)
+// Your runtime beats 40.32 % of cpp submissions
+// Your memory usage beats 79.05 % of cpp submissions (25.9 MB)
 // @lc code=end
 

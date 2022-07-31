@@ -11,5 +11,10 @@ public:
     return *max_element(n.begin(), n.end()) - '0';
   }
 };
+
+// Accepted
+// 97/97 cases passed (64 ms)
+// Your runtime beats 14.51 % of cpp submissions
+// Your memory usage beats 92.75 % of cpp submissions (13.4 MB)
 // @lc code=end
 

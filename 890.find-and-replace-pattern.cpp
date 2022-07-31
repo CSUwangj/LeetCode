@@ -20,7 +20,7 @@ string unify(string s) {
 class Solution {
 public:
   vector<string> findAndReplacePattern(vector<string>& words, string pattern) {
-    vector<int> answer;
+    vector<string> answer;
     pattern = unify(pattern);
     for(auto &word : words) {
       if(unify(word) == pattern) answer.push_back(word);
@@ -28,5 +28,10 @@ public:
     return answer;
   }
 };
+
+// Accepted
+// 47/47 cases passed (10 ms)
+// Your runtime beats 28.33 % of cpp submissions
+// Your memory usage beats 98.2 % of cpp submissions (7.7 MB)
 // @lc code=end
 

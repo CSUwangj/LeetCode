@@ -44,5 +44,10 @@ public:
     return newHead->next;
   }
 };
+
+// Accepted
+// 44/44 cases passed (0 ms)
+// Your runtime beats 100 % of cpp submissions
+// Your memory usage beats 17.76 % of cpp submissions (7.5 MB)
 // @lc code=end
 

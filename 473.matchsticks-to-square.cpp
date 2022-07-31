@@ -33,5 +33,10 @@ public:
     return solve(matchsticks, 0, 0, 0, 0, 0); 
   }
 };
+
+// Accepted
+// 195/195 cases passed (413 ms)
+// Your runtime beats 48.03 % of cpp submissions
+// Your memory usage beats 47.49 % of cpp submissions (10.1 MB)
 // @lc code=end
 

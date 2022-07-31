@@ -28,5 +28,10 @@ public:
     return 1LL * maxH * maxW % MOD;
   }
 };
+
+// Accepted
+// 56/56 cases passed (104 ms)
+// Your runtime beats 48.69 % of cpp submissions
+// Your memory usage beats 76.96 % of cpp submissions (32.2 MB)
 // @lc code=end
 

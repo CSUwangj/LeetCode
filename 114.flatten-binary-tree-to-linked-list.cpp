@@ -31,5 +31,10 @@ public:
     flatten(rightMost->right);
   }
 };
+
+// Accepted
+// 225/225 cases passed (13 ms)
+// Your runtime beats 33.77 % of cpp submissions
+// Your memory usage beats 38.74 % of cpp submissions (12.8 MB)
 // @lc code=end
 
