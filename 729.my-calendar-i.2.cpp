@@ -18,10 +18,9 @@ public:
   }
 };
 
-/**
- * Your MyCalendar object will be instantiated and called as such:
- * MyCalendar* obj = new MyCalendar();
- * bool param_1 = obj->book(start,end);
- */
+// Accepted
+// 107/107 cases passed (167 ms)
+// Your runtime beats 51.09 % of cpp submissions
+// Your memory usage beats 31.77 % of cpp submissions (38.9 MB)
 // @lc code=end
 

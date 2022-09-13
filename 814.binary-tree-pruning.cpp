@@ -26,5 +26,10 @@ public:
     return root;
   }
 };
+
+// Accepted
+// 30/30 cases passed (0 ms)
+// Your runtime beats 100 % of cpp submissions
+// Your memory usage beats 21.01 % of cpp submissions (8.8 MB)
 // @lc code=end
 

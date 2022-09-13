@@ -29,5 +29,10 @@ public:
     return lower_bound(amount.begin(), amount.end(), target) - amount.begin() + 1;
   }
 };
+
+// Accepted
+// 33/33 cases passed (574 ms)
+// Your runtime beats 10.13 % of cpp submissions
+// Your memory usage beats 48.79 % of cpp submissions (78.4 MB)
 // @lc code=end
 

@@ -7,18 +7,18 @@
 // @lc code=start
 class Solution {
 public:
-    void rotate(vector<vector<int>>& matrix) {
-        int n = matrix.size();
-        int low = n / 2;
-        int high = n - low;
-        for(int j = 0; j < high; ++j) {
-            for(int i = 0; i+j < n-1-j; ++i) {
-                swap(matrix[j][j+i], matrix[j+i][n-1-j]);
-                swap(matrix[j][j+i], matrix[n-1-i-j][j]);
-                swap(matrix[n-1-j][n-1-i-j], matrix[n-1-i-j][j]);
-            }
-        }
+  void rotate(vector<vector<int>>& matrix) {
+    int n = matrix.size();
+    int low = n / 2;
+    int high = n - low;
+    for(int j = 0; j < high; ++j) {
+      for(int i = 0; i+j < n-1-j; ++i) {
+        swap(matrix[j][j+i], matrix[j+i][n-1-j]);
+        swap(matrix[j][j+i], matrix[n-1-i-j][j]);
+        swap(matrix[n-1-j][n-1-i-j], matrix[n-1-i-j][j]);
+      }
     }
+  }
 };
 
 // [0, 0], [0, n-1], [n-1, n-1], [n-1, 0] -> [n-1, 0], [0, 0], [0, n-1], [n-1, n-1]
@@ -34,6 +34,10 @@ public:
 // [1, 1+i], [1+i, n-2], [n-2, n-2-i], [n-2-i, 1] -> ...
 
 // [j, j+i], [j+i, n-1-j], [n-1-j, n-1-i-j], [n-1-i-j, j] -> ...
-    
+
+// Accepted
+// 21/21 cases passed (6 ms)
+// Your runtime beats 23.35 % of cpp submissions
+// Your memory usage beats 33.5 % of cpp submissions (7.1 MB)
 // @lc code=end
 

@@ -41,5 +41,10 @@ public:
     return answer;
   }
 };
+
+  // Accepted
+  // 39/39 cases passed (1363 ms)
+  // Your runtime beats 78.29 % of cpp submissions
+  // Your memory usage beats 78.2 % of cpp submissions (192.5 MB)
 // @lc code=end
 

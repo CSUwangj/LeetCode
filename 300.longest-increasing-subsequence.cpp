@@ -26,5 +26,10 @@ public:
     return LIS.size();
   }
 };
+
+// Accepted
+// 54/54 cases passed (7 ms)
+// Your runtime beats 97.92 % of cpp submissions
+// Your memory usage beats 69.86 % of cpp submissions (10.5 MB)
 // @lc code=end
 
