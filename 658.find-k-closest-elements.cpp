@@ -29,5 +29,10 @@ public:
     return vector<int>(arr.begin() + start, arr.begin() + start + k);
   }
 };
+
+// Accepted
+// 66/66 cases passed (48 ms)
+// Your runtime beats 91.78 % of cpp submissions
+// Your memory usage beats 78 % of cpp submissions (31.2 MB)
 // @lc code=end
 

@@ -42,5 +42,10 @@ public:
     return dominoes;
   }
 };
+
+// Accepted
+// 43/43 cases passed (21 ms)
+// Your runtime beats 99.83 % of cpp submissions
+// Your memory usage beats 94.28 % of cpp submissions (12.7 MB)
 // @lc code=end
 

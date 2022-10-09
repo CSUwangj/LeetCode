@@ -5,6 +5,12 @@
  */
 
 // @lc code=start
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 class Solution {
   unordered_map<string, vector<string>> mapping;
   void parsePath(string &path) {
@@ -37,5 +43,10 @@ public:
     return answer;
   }
 };
+
+// Accepted
+// 161/161 cases passed (133 ms)
+// Your runtime beats 82.06 % of cpp submissions
+// Your memory usage beats 88.55 % of cpp submissions (34.2 MB)
 // @lc code=end
 
