@@ -31,5 +31,10 @@ public:
     return dp[d - 1][len - 1];
   }
 };
+
+// Accepted
+// 34/34 cases passed (0 ms)
+// Your runtime beats 100 % of cpp submissions
+// Your memory usage beats 83.12 % of cpp submissions (7.3 MB)
 // @lc code=end
 
