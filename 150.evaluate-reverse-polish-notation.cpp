@@ -9,7 +9,7 @@ bool isOp(string &token) {
   return token.length() == 1 && !isdigit(token[0]);
 }
 
-int apply(string &op, int op1, int op2) {
+int apply(string &op, long long op1, long long op2) {
   switch (op[0]) {
     case '+':
       return op1 + op2;
@@ -26,7 +26,7 @@ int apply(string &op, int op1, int op2) {
 class Solution {
 public:
   int evalRPN(vector<string>& tokens) {
-    vector<int> st;
+    vector<long long> st;
     for(auto &token : tokens) {
       if(isOp(token)) {
         int op2 = st.back();
@@ -41,5 +41,10 @@ public:
     return st.back();
   }
 };
+
+// Accepted
+// 22/22 cases passed (10 ms)
+// Your runtime beats 91.72 % of cpp submissions
+// Your memory usage beats 78.97 % of cpp submissions (12 MB)
 // @lc code=end
 

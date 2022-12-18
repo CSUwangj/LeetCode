@@ -44,15 +44,8 @@ public:
 };
 
 // Accepted
-// 18/18 cases passed (180 ms)
-// Your runtime beats 15.97 % of cpp submissions
-// Your memory usage beats 20.18 % of cpp submissions (47.1 MB)
-
-/**
- * Your MedianFinder object will be instantiated and called as such:
- * MedianFinder* obj = new MedianFinder();
- * obj->addNum(num);
- * double param_2 = obj->findMedian();
- */
+// 21/21 cases passed (493 ms)
+// Your runtime beats 77.43 % of cpp submissions
+// Your memory usage beats 99.79 % of cpp submissions (116.4 MB)
 // @lc code=end
 

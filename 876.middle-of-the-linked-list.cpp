@@ -28,7 +28,7 @@ public:
 
 // Accepted
 // 36/36 cases passed (4 ms)
-// Your runtime beats 40.59 % of cpp submissions
+// Your runtime beats 49.93 % of cpp submissions
 // Your memory usage beats 96.09 % of cpp submissions (7 MB)
 // @lc code=end
 

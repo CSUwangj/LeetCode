@@ -28,6 +28,8 @@ public:
   }
 };
 
-// Runtime: 96 ms, faster than 99.78% of C++ online submissions for Daily Temperatures.
-// Memory Usage: 85 MB, less than 95.98% of C++ online submissions for Daily Temperatures.
+// Accepted
+// 48/48 cases passed (316 ms)
+// Your runtime beats 67.33 % of cpp submissions
+// Your memory usage beats 89.86 % of cpp submissions (98.5 MB)
 // @lc code=end

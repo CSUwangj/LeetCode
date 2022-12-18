@@ -5,6 +5,12 @@
  */
 
 // @lc code=start
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 class Solution {
 public:
   string removeDuplicates(string s) {
@@ -19,5 +25,10 @@ public:
     return answer;
   }
 };
+
+// Accepted
+// 106/106 cases passed (24 ms)
+// Your runtime beats 86.73 % of cpp submissions
+// Your memory usage beats 48.01 % of cpp submissions (11 MB)
 // @lc code=end
 

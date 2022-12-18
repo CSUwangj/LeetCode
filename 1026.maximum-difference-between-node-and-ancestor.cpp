@@ -5,17 +5,12 @@
  */
 
 // @lc code=start
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 class Solution {
 public:
   int maxAncestorDiff(TreeNode* root, int mmin = INT_MAX, int mmax = INT_MIN) {
@@ -28,7 +23,7 @@ public:
 };
 
 // Accepted
-// 27/27 cases passed (4 ms)
-// Your runtime beats 81.69 % of cpp submissions
-// Your memory usage beats 74.27 % of cpp submissions (9.7 MB)
+// 28/28 cases passed (3 ms)
+// Your runtime beats 97.1 % of cpp submissions
+// Your memory usage beats 97.32 % of cpp submissions (9.7 MB)
 // @lc code=end
