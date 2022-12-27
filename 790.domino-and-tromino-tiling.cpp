@@ -32,6 +32,7 @@ public:
     return table[n];
   }
 };
+
 // Accepted
 // 39/39 cases passed (4 ms)
 // Your runtime beats 32.61 % of cpp submissions
