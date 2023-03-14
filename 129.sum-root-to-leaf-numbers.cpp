@@ -18,12 +18,12 @@
  */
 class Solution {
 public:
-    int sumNumbers(TreeNode* root, int cur = 0) {
-      if(!root) return 0;
-      cur = cur * 10 + root->val;
-      if(root->left || root->right) return sumNumbers(root->left, cur) + sumNumbers(root->right, cur);
-      return cur;
-    }
+  int sumNumbers(TreeNode* root, int cur = 0) {
+    if(!root) return 0;
+    cur = cur * 10 + root->val;
+    if(root->left || root->right) return sumNumbers(root->left, cur) + sumNumbers(root->right, cur);
+    return cur;
+  }
 };
 
 // Accepted

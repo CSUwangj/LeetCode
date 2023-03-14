@@ -32,7 +32,7 @@ public:
       if(time(piles, mid) > h) {
         low = mid + 1;
       } else {
-        high = mid - 1;
+        high = mid;
       }
     }
     return low;
@@ -40,7 +40,7 @@ public:
 };
 
 // Accepted
-// 119/119 cases passed (47 ms)
-// Your runtime beats 65.52 % of cpp submissions
-// Your memory usage beats 53.71 % of cpp submissions (18.9 MB)
+// 123/123 cases passed (37 ms)
+// Your runtime beats 96.29 % of cpp submissions
+// Your memory usage beats 45.12 % of cpp submissions (18.9 MB)
 // @lc code=end
