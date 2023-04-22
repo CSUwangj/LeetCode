@@ -5,27 +5,6 @@
  */
 
 // @lc code=start
-/*
-// Definition for a Node.
-class Node {
-public:
-    int val;
-    vector<Node*> neighbors;
-    Node() {
-      val = 0;
-      neighbors = vector<Node*>();
-    }
-    Node(int _val) {
-      val = _val;
-      neighbors = vector<Node*>();
-    }
-    Node(int _val, vector<Node*> _neighbors) {
-      val = _val;
-      neighbors = _neighbors;
-    }
-};
-*/
-
 class Solution {
   map<int, Node*> nodes;
 public:
@@ -45,7 +24,7 @@ public:
 };
 
 // Accepted
-// 22/22 cases passed (15 ms)
-// Your runtime beats 14.73 % of cpp submissions
-// Your memory usage beats 59.68 % of cpp submissions (8.7 MB)
+// 22/22 cases passed (7 ms)
+// Your runtime beats 61.34 % of cpp submissions
+// Your memory usage beats 12.87 % of cpp submissions (9.1 MB)
 // @lc code=end

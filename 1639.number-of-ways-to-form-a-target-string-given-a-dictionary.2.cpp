@@ -18,17 +18,17 @@ public:
     int wordLen = words.front().length();
     int targetLen = target.length();
     if(targetLen > wordLen) return 0;
-    vector<vector<int>> count(26, vector<int>(wordLen + 1));
+    vector<vector<int>> count(wordLen + 1, vector<int>(26));
 
     for(const auto &word : words) {
       for(int i = 0; i < wordLen; ++i) {
-        count[word[i] - 'a'][i] += 1;
+        count[i][word[i] - 'a'] += 1;
       }
     }
 
     for(int c = 0; c < 26; ++c) {
       for(int i = wordLen - 1; i >= 0; --i) {
-        count[c][i] += count[c][i + 1];
+        count[i][c] += count[i + 1][c];
       }
     }
     vector<vector<int>> dp(wordLen + 1, vector<int>(targetLen, -1));
@@ -39,9 +39,9 @@ public:
       int c = target[targetPos] - 'a';
       long long result = 0;
       int originalPos = wordPos;
-      for(int pos = wordPos; count[c][pos] && wordLen - pos >= targetLen - targetPos; ++pos) {
-        if(count[c][pos] - count[c][pos + 1]) {
-          result += 1LL * (count[c][pos] - count[c][pos + 1]) * solve(pos + 1, targetPos + 1);
+      for(int pos = wordPos; count[pos][c] && wordLen - pos >= targetLen - targetPos; ++pos) {
+        if(count[pos][c] - count[pos + 1][c]) {
+          result += 1LL * (count[pos][c] - count[pos + 1][c]) * solve(pos + 1, targetPos + 1);
           result %= MOD;
         }
       }
@@ -58,8 +58,8 @@ public:
 };
 
 // Accepted
-// 89/89 cases passed (760 ms)
+// 89/89 cases passed (875 ms)
 // Your runtime beats 5.18 % of cpp submissions
-// Your memory usage beats 48.28 % of cpp submissions (53.8 MB)
+// Your memory usage beats 45.26 % of cpp submissions (54.4 MB)
 // @lc code=end
 

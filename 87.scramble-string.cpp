@@ -5,52 +5,47 @@
  */
 
 // @lc code=start
-unordered_map<char, int> cnta;
-unordered_map<char, int> cntb;
-bool test(string &a, string &b, int sa, int ea, int sb, int eb) {
-  // cout << a << ' ' << b << ' ' << sa << ' ' << ea << ' ' << sb << ' ' << eb << endl;
-  cnta.clear();
-  cntb.clear();
-  int len = ea - sa;
-  bool ok = true;
-  for(int i = 0; i < len; ++i) {
-    ok &= a[sa + i] == b[sb + i];
-    cnta[a[sa + i]] += 1;
-    cntb[b[sb + i]] += 1;
-  }
-  if(ok) return true;
-  if(cnta != cntb) return false;
-  cnta.clear();
-  cntb.clear();
-  int begin = -1;
-  for(int i = 0; i < len - 1; ++i) {
-    cnta[a[sa + i]] += 1;
-    cntb[b[sb + i]] += 1;
-    if(cnta == cntb) begin = i;
-  }
-  begin += 1;
-  if(begin) return test(a, b, sa, sa + begin, sb, sb + begin) && test(a, b, sa + begin, ea, sb + begin, eb);
-  int end = -1;
-  cnta.clear();
-  cntb.clear();
-  for(int i = 0; i < len - 1; ++i) {
-    cnta[a[sa + i]] += 1;
-    cntb[b[eb - 1 - i]] += 1;
-    if(cnta == cntb) end = i;
-  }
-  end += 1;
-  if(end) return test(a, b, sa, sa + end, eb - end, eb) && test(a, b, sa + end, ea, sb, sb + len - end);
-  return false;
-}
-
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 class Solution {
+  unordered_map<string, bool> result;
 public:
-  bool isScramble(string a, string b) {
-    int len1 = a.length();
-    int len2 = b.length();
-    if(len1 != len2) return false;
-    return test(a, b, 0, len1, 0, len2);
+  bool isScramble(string s1, string s2) {
+    if(s1 == s2) return true;
+    int len = s1.length();
+
+    if(result.count(s1 + s2)) return result[s1 + s2];
+    vector<int> a(26), b(26), c(26);
+
+    for(int i = 1; i < len; ++i) {
+      int j = len - i;
+      a[s1[i - 1] - 'a'] += 1;
+      b[s2[i - 1] - 'a'] += 1;
+      c[s2[j] - 'a'] += 1;
+
+      if(a == b && isScramble(s1.substr(0, i), s2.substr(0, i)) && isScramble(s1.substr(i), s2.substr(i))) {
+        result[s1 + s2] = true;
+        return true;
+      }
+
+      if(a == c && isScramble(s1.substr(0, i), s2.substr(j)) && isScramble(s1.substr(i), s2.substr(0, j))) {
+        result[s1 + s2] = true;
+        return true;
+      }
+    }
+
+    result[s1 + s2] = false;
+    return false;
   }
 };
+
+// Accepted
+// 288/288 cases passed (3 ms)
+// Your runtime beats 99.15 % of cpp submissions
+// Your memory usage beats 79.89 % of cpp submissions (15.2 MB)
 // @lc code=end
 
