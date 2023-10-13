@@ -11,5 +11,10 @@ public:
     return sqrt(n);
   }
 };
+
+// Accepted
+// 35/35 cases passed (0 ms)
+// Your runtime beats 100 % of cpp submissions
+// Your memory usage beats 63.99 % of cpp submissions (5.9 MB)
 // @lc code=end
 

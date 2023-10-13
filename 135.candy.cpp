@@ -5,6 +5,12 @@
  */
 
 // @lc code=start
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 using pi = pair<int, int>;
 int cd[20000];
 class Solution {
@@ -43,8 +49,8 @@ public:
 };
 
 // Accepted
-// 48/48 cases passed (56 ms)
-// Your runtime beats 12.87 % of cpp submissions
-// Your memory usage beats 8.43 % of cpp submissions (19.8 MB)
+// 48/48 cases passed (28 ms)
+// Your runtime beats 17.4 % of cpp submissions
+// Your memory usage beats 6.74 % of cpp submissions (19.9 MB)
 // @lc code=end
 

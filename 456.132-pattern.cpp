@@ -31,8 +31,8 @@ public:
 };
 
 // Accepted
-// 102/102 cases passed (60 ms)
-// Your runtime beats 99.08 % of cpp submissions
-// Your memory usage beats 98.98 % of cpp submissions (37.4 MB)
+// 103/103 cases passed (49 ms)
+// Your runtime beats 98.35 % of cpp submissions
+// Your memory usage beats 85.68 % of cpp submissions (48 MB)
 // @lc code=end
 

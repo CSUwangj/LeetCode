@@ -36,5 +36,10 @@ public:
     return answer == numCourses;
   }
 };
+
+// Accepted
+// 52/52 cases passed (25 ms)
+// Your runtime beats 62.83 % of cpp submissions
+// Your memory usage beats 83.94 % of cpp submissions (13.2 MB)
 // @lc code=end
 

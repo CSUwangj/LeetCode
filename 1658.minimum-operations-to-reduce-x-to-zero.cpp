@@ -5,6 +5,12 @@
  */
 
 // @lc code=start
+auto speedup = [](){
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios::sync_with_stdio(false);
+  return 0;
+}();
 class Solution {
 public:
   int minOperations(vector<int>& nums, int x) {
@@ -32,8 +38,8 @@ public:
 };
 
 // Accepted
-// 93/93 cases passed (1576 ms)
-// Your runtime beats 5.09 % of cpp submissions
-// Your memory usage beats 5.08 % of cpp submissions (237.8 MB)
+// 94/94 cases passed (577 ms)
+// Your runtime beats 5.05 % of cpp submissions
+// Your memory usage beats 5.04 % of cpp submissions (238.1 MB)
 // @lc code=end
 
